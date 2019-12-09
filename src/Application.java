@@ -15,6 +15,8 @@ public class Application {
         b.addActionListener(new ActionListener(){
             public void actionPerformed(ActionEvent e){
                 jProgressBar.setValue(5000);
+                CalculatingPrimesThread calcThread = new CalculatingPrimesThread();
+                calcThread.start();
             }
         });
         jProgressBar.setBounds(14, 48, 350, 20);
